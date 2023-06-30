@@ -1,12 +1,42 @@
 from DCTProcessor import *
-#from main import *
-class ImageProcessor:
 
+class ImageProcessor:
+    """
+    A class for processing an image using Discrete Cosine Transform (DCT).
+
+    Attributes
+    ----------
+    qp : int
+        Quantization parameter.
+    dct_processor : DCTProcessor
+        Instance of DCTProcessor.
+    """
     def __init__(self, qp):
+        """
+        Initialize ImageProcessor with the given quantization parameter (qp).
+
+        Parameters
+        ----------
+        qp : int
+            Quantization parameter.
+        """
         self.qp = qp
         self.dct_processor = DCTProcessor(qp)
 
     def compress_and_reconstruct_block(self, block):
+        """
+        Compress and reconstruct a block using DCT.
+
+        Parameters
+        ----------
+        block : ndarray
+            Input block for compression and reconstruction.
+
+        Returns
+        -------
+        ndarray
+            Reconstructed block.
+        """
         dct_block = self.dct_processor.dct_4x4(block)
         quantized_block = self.dct_processor.quantization(dct_block)
         dequantized_block = self.dct_processor.dequantization(quantized_block)
@@ -14,6 +44,19 @@ class ImageProcessor:
         return reconstructed_block
 
     def compress_and_reconstruct_full_img(self, intra_predicted):
+        """
+        Compress and reconstruct the full image using DCT.
+
+        Parameters
+        ----------
+        intra_predicted : ndarray
+            Intra predicted image for compression and reconstruction.
+
+        Returns
+        -------
+        ndarray
+            Reconstructed image.
+        """
         reconstructed_img = np.zeros(intra_predicted.shape, dtype=np.int32)
         for i in range(0, intra_predicted.shape[0], 4):
             for j in range(0 , intra_predicted.shape[1] , 4):
@@ -21,6 +64,23 @@ class ImageProcessor:
         return np.asarray(reconstructed_img, dtype=np.int32)
 
     def generate_prediction_block(self, original_block, predictions, mode):
+        """
+        Generate a prediction block using Intra Prediction.
+
+        Parameters
+        ----------
+        original_block : ndarray
+            Original block for prediction.
+        predictions : dict
+            Predictions for generating a new block.
+        mode : int
+            Intra prediction mode.
+
+        Returns
+        -------
+        tuple
+            A tuple containing new block and new Intra predicted block.
+        """
         A, B, C, D, E, F, G, H, I, J, K, L, Q = predictions.values()
         new_intra = intra_prediction(original_block, mode, A, B, C, D, E, F, G, H, I, J, K, L, Q)
         new_block_diff = self.compress_and_reconstruct_block(original_block - new_intra)
@@ -32,13 +92,19 @@ def intra_prediction(block, mode, A, B, C, D, E, F, G, H, I, J, K, L, Q):
     """
     Performs intra prediction on a 4x4 block.
 
-    Args:
-        block: A 4x4 block of pixels.
-        mode: The intra prediction mode (0-8).
-        A, B, C, D, E, F, G, H, I, J, K, L, Q: Pixel values from surrounding blocks used for prediction.
+    Parameters
+    ----------
+    block : ndarray
+        A 4x4 block of pixels.
+    mode : int
+        The intra prediction mode (0-8).
+    A, B, C, D, E, F, G, H, I, J, K, L, Q : int
+        Pixel values from surrounding blocks used for prediction.
 
-    Returns:
-        intra_predicted_block: A 4x4 block of predicted pixels.
+    Returns
+    -------
+    intra_predicted_block : ndarray
+        A 4x4 block of predicted pixels.
     """
     if not 0 <= mode <= 8:
         raise ValueError("Mode must be an integer between 0 and 8.")

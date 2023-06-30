@@ -1,0 +1,46 @@
+{
+    "bus_cif": {
+        "6": {
+            "Residual_MAD": 23.567323626893938,
+            "Intra_Prediction_PSNR": 15.8678967199016,
+            "Reconstructed_PSNR": 15.93105662395991
+        },
+        "12": {
+            "Residual_MAD": 23.396987452651516,
+            "Intra_Prediction_PSNR": 15.903162501820194,
+            "Reconstructed_PSNR": 15.957074850399213
+        },
+        "18": {
+            "Residual_MAD": 23.353594539141415,
+            "Intra_Prediction_PSNR": 15.977418884511106,
+            "Reconstructed_PSNR": 16.033236427873593
+        },
+        "30": {
+            "Residual_MAD": 24.754133128156564,
+            "Intra_Prediction_PSNR": 15.906368019303583,
+            "Reconstructed_PSNR": 15.715424508063888
+        }
+    },
+    "coastguard_cif": {
+        "6": {
+            "Residual_MAD": 33.1395202020202,
+            "Intra_Prediction_PSNR": 13.32573027618592,
+            "Reconstructed_PSNR": 13.395374389266703
+        },
+        "12": {
+            "Residual_MAD": 32.91103416982323,
+            "Intra_Prediction_PSNR": 13.374872829939822,
+            "Reconstructed_PSNR": 13.433505651748172
+        },
+        "18": {
+            "Residual_MAD": 32.12626262626262,
+            "Intra_Prediction_PSNR": 13.554844292332792,
+            "Reconstructed_PSNR": 13.5891768492349
+        },
+        "30": {
+            "Residual_MAD": 25.792771464646464,
+            "Intra_Prediction_PSNR": 15.733535861495584,
+            "Reconstructed_PSNR": 15.392424799537515
+        }
+    }
+}
