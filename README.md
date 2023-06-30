@@ -30,8 +30,6 @@
 In the course "Transmission of Video and Audio Signals over the Internet 37121221," the purpose of this exercise is to learn about spatial editing methods that serve as the foundation for Intra Prediction compression.
 
 ## Resources
-- [VCodex: H.264 Intra Precision](https://www.vcodex.com/h264avc-intra-precision)
-- Richardson, I. E. The H.264 Advanced Video Compression Standard. John Wiley & Sons, 2011.
 - Kumar, Anil, et al. "Intra Prediction Algorithm for Video Frames of H.264." NVEO-NATURAL VOLATILES & ESSENTIAL OILS Journal| NVEO (2021): 11357-11367
 
 ## Question 1
