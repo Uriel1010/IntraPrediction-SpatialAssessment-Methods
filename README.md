@@ -143,7 +143,7 @@ Residual Image (MAD: 32.12626262626262)
 Reconstructed Image (PSNR: 13.5891768492349)
 
 #### coastguard_cif for QP=30
-![coastguard_cif_30_intra](utput_files/coastguard_cif_30_intra.png)
+![coastguard_cif_30_intra](files/output_files/coastguard_cif_30_intra.png)
 ![coastguard_cif_30_residual](files/output_files/coastguard_cif_30_residual.png)
 ![coastguard_cif_30_reconstructed](files/output_files/coastguard_cif_30_reconstructed.png)
 
