@@ -35,13 +35,9 @@ In the course "Transmission of Video and Audio Signals over the Internet 3712122
 ## Question 1
 Two videos were selected for this exercise. From each video, one uncompressed Intensity (Luma) frame was extracted and saved as a separate file. This resulted in two uncompressed grayscale images:
 
-![bus_cif_frame](files/output_files/bus_cif_frame.png)
-
-`bus_cif_frame.png`
-
-![coastguard_cif_frame](files/output_files/coastguard_cif_frame.png)
-
-`coastguard_cif_frame.png`
+| ![bus_cif_frame](files/output_files/bus_cif_frame.png) | ![coastguard_cif_frame](files/output_files/coastguard_cif_frame.png) |
+| -------- | -------- |
+|`bus_cif_frame.png` |`coastguard_cif_frame.png` |
 
 ## Question 2
 ### Part a
@@ -65,9 +61,9 @@ For each image and for QP values of 6, 12, 18, and 30, the original image, the i
 Here are the outputs for each QP value:
 
 #### bus_cif for QP=6
-![bus_cif_6_intra](files/output_files/bus_cif_6_intra.png)
-![bus_cif_6_residual](files/output_files/bus_cif_6_residual.png)
-![bus_cif_6_reconstructed](files/output_files/bus_cif_6_reconstructed.png)
+
+|![bus_cif_6_intra](files/output_files/bus_cif_6_intra.png) | ![bus_cif_6_residual](files/output_files/bus_cif_6_residual.png) | ![bus_cif_6_reconstructed](files/output_files/bus_cif_6_reconstructed.png) | 
+| -------- | -------- | -------- |
 
 Image after Intra Prediction (PSNR: 15.8678967199016)
 
@@ -76,9 +72,9 @@ Residual Image (MAD: 23.567323626893938)
 Reconstructed Image (PSNR: 15.93105662395991)
 
 #### bus_cif for QP=12
-![bus_cif_12_intra](files/output_files/bus_cif_12_intra.png)
-![bus_cif_12_residual](files/output_files/bus_cif_12_residual.png)
-![bus_cif_12_reconstructed]C:\Users\uriel\PycharmProjects\VideoProccesing2\files/output_files/bus_cif_12_reconstructed.png)
+
+| ![bus_cif_12_intra](files/output_files/bus_cif_12_intra.png) | ![bus_cif_12_residual](files/output_files/bus_cif_12_residual.png) | ![bus_cif_12_reconstructed](files/output_files/bus_cif_12_reconstructed.png) |
+| -------- | -------- | -------- |
 
 Image after Intra Prediction (PSNR: 15.903162501820194)
 
@@ -87,9 +83,9 @@ Residual Image (MAD: 23.396987452651516)
 Reconstructed Image (PSNR: 15.957074850399213)
 
 #### bus_cif for QP=18
-![bus_cif_18_intra](files/output_files/bus_cif_18_intra.png)
-![bus_cif_18_residual](files/output_files/bus_cif_18_residual.png)
-![bus_cif_18_reconstructed](files/output_files/bus_cif_18_reconstructed.png)
+
+| ![bus_cif_18_intra](files/output_files/bus_cif_18_intra.png) | ![bus_cif_18_residual](files/output_files/bus_cif_18_residual.png) | ![bus_cif_18_reconstructed](files/output_files/bus_cif_18_reconstructed.png) |
+|--------------------------------------------------------------| -------- | -------- |
 
 Image after Intra Prediction (PSNR: 15.977418884511106)
 
@@ -98,9 +94,9 @@ Residual Image (MAD: 23.353594539141415)
 Reconstructed Image (PSNR: 16.033236427873593)
 
 #### bus_cif for QP=30
-![bus_cif_30_intra](files/output_files/bus_cif_30_intra.png)
-![bus_cif_30_residual](files/output_files/bus_cif_30_residual.png)
-![bus_cif_30_reconstructed](files/output_files/bus_cif_30_reconstructed.png)
+
+|![bus_cif_30_intra](files/output_files/bus_cif_30_intra.png) | ![bus_cif_30_residual](files/output_files/bus_cif_30_residual.png) | ![bus_cif_30_reconstructed](files/output_files/bus_cif_30_reconstructed.png) |
+| -------- | -------- | -------- |
 
 Image after Intra Prediction (PSNR: 15.906368019303583)
 
@@ -110,9 +106,9 @@ Reconstructed Image (PSNR: 15.715424508063888)
 
 
 #### coastguard_cif for QP=6
-![coastguard_cif_6_intra](files/output_files/coastguard_cif_6_intra.png)
-![coastguard_cif_6_residual](files/output_files/coastguard_cif_6_residual.png)
-![coastguard_cif_6_reconstructed](files/output_files/coastguard_cif_6_reconstructed.png)
+
+| ![coastguard_cif_6_intra](files/output_files/coastguard_cif_6_intra.png) | ![coastguard_cif_6_residual](files/output_files/coastguard_cif_6_residual.png) | ![coastguard_cif_6_reconstructed](files/output_files/coastguard_cif_6_reconstructed.png) |
+| -------- | -------- |------------------------------------------------------------------------------------------|
 
 Image after Intra Prediction (PSNR: 13.32573027618592)
 
@@ -121,9 +117,9 @@ Residual Image (MAD: 33.1395202020202)
 Reconstructed Image (PSNR: 13.395374389266703)
 
 #### coastguard_cif for QP=12
-![coastguard_cif_12_intra](files/output_files/coastguard_cif_12_intra.png)
-![coastguard_cif_12_residual](files/output_files/coastguard_cif_12_residual.png)
-![coastguard_cif_12_reconstructed](files/output_files/coastguard_cif_12_reconstructed.png)
+
+| ![coastguard_cif_12_intra](files/output_files/coastguard_cif_12_intra.png) | ![coastguard_cif_12_residual](files/output_files/coastguard_cif_12_residual.png) | ![coastguard_cif_12_reconstructed](files/output_files/coastguard_cif_12_reconstructed.png) |
+| -------- | -------- | -------- |
 
 Image after Intra Prediction (PSNR: 13.374872829939822)
 
@@ -132,9 +128,9 @@ Residual Image (MAD: 32.91103416982323)
 Reconstructed Image (PSNR: 13.433505651748172)
 
 #### coastguard_cif for QP=18
-![coastguard_cif_18_intra](files/output_files/coastguard_cif_18_intra.png)
-![coastguard_cif_18_residual](files/output_files/coastguard_cif_18_residual.png)
-![coastguard_cif_18_reconstructed](files/output_files/coastguard_cif_18_reconstructed.png)
+
+| ![coastguard_cif_18_intra](files/output_files/coastguard_cif_18_intra.png)  |  ![coastguard_cif_18_residual](files/output_files/coastguard_cif_18_residual.png)|  ![coastguard_cif_18_reconstructed](files/output_files/coastguard_cif_18_reconstructed.png) |
+|-----------------------------------------------------------------------------|---|---|
 
 Image after Intra Prediction (PSNR: 13.554844292332792)
 
@@ -143,9 +139,9 @@ Residual Image (MAD: 32.12626262626262)
 Reconstructed Image (PSNR: 13.5891768492349)
 
 #### coastguard_cif for QP=30
-![coastguard_cif_30_intra](files/output_files/coastguard_cif_30_intra.png)
-![coastguard_cif_30_residual](files/output_files/coastguard_cif_30_residual.png)
-![coastguard_cif_30_reconstructed](files/output_files/coastguard_cif_30_reconstructed.png)
+| ![coastguard_cif_30_intra](files/output_files/coastguard_cif_30_intra.png) | ![coastguard_cif_30_residual](files/output_files/coastguard_cif_30_residual.png) | ![coastguard_cif_30_reconstructed](files/output_files/coastguard_cif_30_reconstructed.png)  |
+|----------------------------------------------------------------------------|----------------------------------------------------------------------------------|---|
+
 
 Image after Intra Prediction (PSNR: 15.733535861495584)
 
