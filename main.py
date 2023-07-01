@@ -166,52 +166,27 @@ for vp in videos_list:
         intra, diff, diff_recon, reconstructed, modes = encoder.full_process(y_frame)
         psnr_intra = dct_processor.calculate_psnr(y_frame, intra)
 
-        fig1, ax1 = plt.subplots()
+        fig1, ax1 = plt.subplots(figsize=(2.5, 2))
         ax1.imshow(diff)
         ax1.set_title(f'Residual')# - MAD: {dct_processor.calculate_mad(y_frame, reconstructed)}')
         ax1.set_xlabel('Width')
         ax1.set_ylabel('Height')
-        fig1.savefig(f'files/output_files/{vp.filename}_{qp}_residual.png')
+        fig1.savefig(f'files/output_files/{vp.filename}_{qp}_residual.png', dpi=300)
 
-        fig2, ax2 = plt.subplots()
+        fig2, ax2 = plt.subplots(figsize=(2.5, 2))
         ax2.imshow(intra)
         ax2.set_title(f'Intra Prediction')# - PSNR: {psnr_intra}')
         ax2.set_xlabel('Width')
         ax2.set_ylabel('Height')
-        fig2.savefig(f'files/output_files/{vp.filename}_{qp}_intra.png')
+        fig2.savefig(f'files/output_files/{vp.filename}_{qp}_intra.png', dpi=300)
 
-        fig3, ax3 = plt.subplots()
+        fig3, ax3 = plt.subplots(figsize=(2.5, 2))
         ax3.imshow(reconstructed)
         ax3.set_title(f'Reconstructed')# - PSNR: {dct_processor.calculate_psnr(y_frame, reconstructed)}')
         ax3.set_xlabel('Width')
         ax3.set_ylabel('Height')
-        fig3.savefig(f'files/output_files/{vp.filename}_{qp}_reconstructed.png')
+        fig3.savefig(f'files/output_files/{vp.filename}_{qp}_reconstructed.png', dpi=300)
 
-
-        # plot = plt.figure(figsize=(16, 4))
-        #
-        # plt.subplot(131)
-        # plt.imshow(diff, cmap='viridis')
-        # plt.title(f'Residual - MAD: {dct_processor.calculate_mad(y_frame, reconstructed)}')
-        # plt.xlabel('Width')
-        # plt.ylabel('Height')
-        #
-        # plt.subplot(132)
-        # plt.imshow(intra, cmap='viridis')
-        # plt.title(f'Intra Prediction - PSNR: {psnr_intra}')
-        # plt.xlabel('Width')
-        # plt.ylabel('Height')
-        #
-        # plt.subplot(133)
-        # plt.imshow(reconstructed, cmap='viridis')
-        # plt.title(f'Reconstructed - PSNR: {dct_processor.calculate_psnr(y_frame, reconstructed)}')
-        # plt.xlabel('Width')
-        # plt.ylabel('Height')
-        # plt.suptitle(f'{vp.filename} - QP: {qp}')
-        #
-        # save_plot(plot, f'{vp.filename}_{qp}.png')
-        #
-        # plt.show()
 
         psnr_intra = dct_processor.calculate_psnr(y_frame, intra)
         mad = dct_processor.calculate_mad(y_frame, reconstructed)
